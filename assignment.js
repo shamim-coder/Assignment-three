@@ -4,15 +4,15 @@
 function kilometerToMeter(kilometer) {
     let meter = 1000; // 
     
-    if(kilometer < 0 || isNaN(kilometer)) { 
-        return "Wrong Input";
+    if(kilometer < 0 || isNaN(kilometer) ) { 
+        return "Wrong Input or Negative value Detect";
     } 
     else {
         meter *= kilometer; // multiply the Kilometer value by 1000
         return meter;
     }
 }
-// let result = kilometerToMeter(-5);
+// let result = kilometerToMeter(4.5);
 // console.log(result);
 
 
@@ -32,23 +32,23 @@ function budgetCalculator(watch, mobile, laptop) {
     laptopPrice *= laptop;
 
     // Assign to totalPrice
-    let totalPrice = watchPrice+mobilePrice+laptopPrice;
+    let totalPrice = ( watchPrice + mobilePrice + laptopPrice );
     
     if (watch == null || mobile == null || laptop == null) {
-        return "Blank Input";
+        return "Please Input Currect Value";
     }
     else if (isNaN(watch) || isNaN(mobile) || isNaN(laptop)) {
-        return "Wrong Input";
+        return "Wrong Input Detect";
     }
     else if (watch < 0 || mobile < 0 || laptop < 0) {
-        return "Negetive Value Not Allowed";
+        return "Negetive Value Detect";
     }
     else {
         return totalPrice; // Return Total Price of all Items.
     }
 }
 
-// let result = budgetCalculator(4,5,2);
+// let result = budgetCalculator(7,5,3);
 // console.log(result);
 
 
@@ -56,66 +56,66 @@ function budgetCalculator(watch, mobile, laptop) {
 
 // Hotel Cost Calculetion
 
-function hotelCost(day) {
+function hotelCost(howManyDay) {
     
     let totalCost = 0;
 
     // nagative value or number input or blank input detect
-    if (day < 0 ) {
-        return "Nagetive Value";
-    } else if (day == null) {
-        return "Blank Input";
-    } else if (isNaN(day)) {
-        return "Wrong Input";
+    if ( howManyDay < 0 ) {
+        return "Nagetive Value Detect";
+    } 
+    else if ( howManyDay == null ) {
+        return "Please Input Currect Value";
+    } 
+    else if ( isNaN(howManyDay) ) {
+        return "Wrong Input Detect";
     }
     // Calculate Hotel Cost 
     else { 
-        if(day <= 10) {                 // First 10 Days Calculetion
-            totalCost = (day*100);
+        if(howManyDay <= 10) {                 // First 10 Days Calculetion
+            totalCost = (howManyDay * 100);
             return totalCost;
         } 
-        else if (day <= 20) {           // Second 10 Days Calculetion
-            let firstTenDays = (10*100);
-            let remainDays = (day-10)*80;
-            totalCost = firstTenDays+remainDays;
+        else if (howManyDay <= 20) {           // Second 10 Days Calculetion
+            let firstTenDays = (10 * 100);
+            let remainDays = (howManyDay - 10) * 80;
+            totalCost = firstTenDays + remainDays;
             return totalCost;
         }
-        else {                          // After 20 Days Calculetion
-            let firstTenDays = (10*100);
-            let secondTenDays = (10*80);
-            let remainDays = (day-20)*50;
-            totalCost = firstTenDays+secondTenDays+remainDays;
+        else {                                  // After 20 Days Calculetion
+            let firstTenDays = (10 * 100);
+            let secondTenDays = (10 * 80);
+            let remainDays = (howManyDay - 20) * 50;
+            totalCost = firstTenDays + secondTenDays + remainDays;
             return totalCost;
         } 
     }
     
 }
-// let result = hotelCost(4);
+// let result = hotelCost(22);
 // console.log(result);
+
 
 
 
 // Mega Friends Largest Name Finder
 
 function megaFriend(friends){
-    let largeName="";
+    let largeName = [];
 
     if (friends == null) {
-        return "Blank Input";
-    } 
-    else if (Array.isArray(friends) == false) {
-        return "Its not Array";
+        return "Input Your Friends Collection";
     }
-    else if (typeof(friends) == 'number') {
-        return "Number Cannot be Define";
+    else if (Array.isArray(friends) == false) {
+        return "Its not an Array";
     }
     else {
         for (let i = 0; i < friends.length; i++) {
         
-            const element = friends[i];
+            const friendsElement = friends[i];
            
-            if (element.length > largeName.length) {
-                largeName = element;
+            if (friendsElement.length > largeName.length) {
+                largeName = friendsElement;
             }
         }
         return largeName;
@@ -123,7 +123,7 @@ function megaFriend(friends){
     
 }
 
-let friendlist = ["Shamim", "Rasel", "Abdul", "Torikul", "Arafat"];
-let result = megaFriend(["Shamim", 8, "Abdul", "Torikul", "Arafat"]);
-console.log(result);
+// let friendlist = ["Shamim", "Prihas", "Asaduzzaman Sohel", "Abdul", "Torikul", "Arafat"];
+// let result = megaFriend(friendlist);
+// console.log(result);
 
