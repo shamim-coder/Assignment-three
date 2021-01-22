@@ -1,3 +1,9 @@
+// Assignment Github URL:
+// https://github.com/wpshamim/Assignment-three
+
+
+
+
 // Kilometer to Meter Calculation
 
 
@@ -12,8 +18,8 @@ function kilometerToMeter(kilometer) {
         return meter;
     }
 }
-// let result = kilometerToMeter(4.5);
-// console.log(result);
+// let getmeter = kilometerToMeter(4.5);
+// console.log(getmeter);
 
 
 
@@ -48,8 +54,8 @@ function budgetCalculator(watch, mobile, laptop) {
     }
 }
 
-// let result = budgetCalculator(7,5,3);
-// console.log(result);
+// let getCost = budgetCalculator(7,5,3);
+// console.log(getCost);
 
 
 
@@ -74,12 +80,14 @@ function hotelCost(howManyDay) {
     else { 
         if(howManyDay <= 10) {                 // First 10 Days Calculetion
             totalCost = (howManyDay * 100);
+            // return total cost
             return totalCost;
         } 
         else if (howManyDay <= 20) {           // Second 10 Days Calculetion
             let firstTenDays = (10 * 100);
             let remainDays = (howManyDay - 10) * 80;
             totalCost = firstTenDays + remainDays;
+            // return total cost
             return totalCost;
         }
         else {                                  // After 20 Days Calculetion
@@ -87,13 +95,14 @@ function hotelCost(howManyDay) {
             let secondTenDays = (10 * 80);
             let remainDays = (howManyDay - 20) * 50;
             totalCost = firstTenDays + secondTenDays + remainDays;
+            // return total cost
             return totalCost;
         } 
     }
     
 }
-// let result = hotelCost(22);
-// console.log(result);
+// let getTotalCost = hotelCost(22);
+// console.log(getTotalCost);
 
 
 
